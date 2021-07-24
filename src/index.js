@@ -1,6 +1,7 @@
 module.exports = function solveSudoku(matrix) {
   let flag = true;
   let possibles = {};
+  let iterations = 0;
   // going through whole matrix 
   while (flag) {
     flag = false;
@@ -48,7 +49,9 @@ module.exports = function solveSudoku(matrix) {
       }
     }
 
-
+    iterations++;
+    if (iterations > 1000) 
+      break;
 
   }
 
